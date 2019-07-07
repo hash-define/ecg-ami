@@ -248,12 +248,12 @@
 			this.context.strokeStyle = "black";
 			
 			// -P
-			this.context.moveTo(0, 140);
-			this.context.lineTo(60, 140);
+			this.context.moveTo(0, 140 - this.indexes[5]);
+			this.context.lineTo(60, 140 - this.indexes[5]);
 			
 			// P-Q
-			this.context.moveTo(100, 140);
-			this.context.lineTo(135, 140);
+			this.context.moveTo(100, 140 - this.indexes[5]);
+			this.context.lineTo(135, 140 - this.indexes[5]);
 			
 			// S-T
 			this.context.moveTo(180, 140 - (this.indexes[4] + this.indexes[3]) / 4);
@@ -267,14 +267,14 @@
 			
 			// P-wave
 			var p = new Path2D();
-			p.moveTo(60, 140);
-			p.arcTo(80, 140 - this.indexes[0], 100, 140, 15);
-			p.lineTo(100,140);
+			p.moveTo(60, 140 - this.indexes[5]);
+			p.arcTo(80, 140 - this.indexes[0], 100, 140 - this.indexes[5], 15);
+			p.lineTo(100,140 - this.indexes[5]);
 			this.context.stroke(p);
 			
 			// Q-Wave
 			var q = new Path2D();
-			q.moveTo(135,140);
+			q.moveTo(135,140 - this.indexes[5]);
 			q.lineTo(140, 140 - this.indexes[1]);
 			this.context.stroke(q);
 			
